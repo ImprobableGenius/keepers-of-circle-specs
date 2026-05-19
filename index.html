@@ -40,63 +40,54 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 2rem;
-            padding: 3rem 2rem;
-            max-width: 1400px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 3rem 2rem;
         }
 
-        .card {
+        .category-card {
             background: #1a1a1a;
             border-radius: 12px;
-            overflow: hidden;
             border: 1px solid #2a2a2a;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
             transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
-        .card:hover {
+        .category-card:hover {
             transform: translateY(-4px);
             border-color: #667eea;
         }
 
-        .card-preview {
-            width: 100%;
-            height: 350px;
-            border: none;
-            background: #fff;
-        }
-
-        .card-body {
-            padding: 1.5rem;
-        }
-
-        .card-body h2 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            color: #f0f0f0;
-        }
-
-        .card-body p {
-            font-size: 0.9rem;
-            color: #888;
+        .category-card .icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        .card-body a {
-            display: inline-block;
-            padding: 0.5rem 1.25rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: opacity 0.2s ease;
+        .category-card h2 {
+            font-size: 1.4rem;
+            color: #f0f0f0;
+            margin-bottom: 0.5rem;
         }
 
-        .card-body a:hover {
-            opacity: 0.85;
+        .category-card p {
+            font-size: 0.95rem;
+            color: #888;
+            margin-bottom: 1.25rem;
+        }
+
+        .category-card .count {
+            display: inline-block;
+            padding: 0.3rem 0.9rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
         }
 
         @media (max-width: 600px) {
@@ -108,10 +99,6 @@
             header h1 {
                 font-size: 1.75rem;
             }
-
-            .card-preview {
-                height: 250px;
-            }
         }
     </style>
 </head>
@@ -122,41 +109,19 @@
     </header>
 
     <main class="grid">
-        <div class="card">
-            <iframe class="card-preview" src="V1 _ Classic sidebar _ row listings.html" loading="lazy"></iframe>
-            <div class="card-body">
-                <h2>V1: Classic Sidebar + Row Listings</h2>
-                <p>Traditional sidebar navigation with row-based job listings layout.</p>
-                <a href="V1 _ Classic sidebar _ row listings.html">View Full Mockup</a>
-            </div>
-        </div>
+        <a class="category-card" href="job-listings/index.html">
+            <div class="icon">📋</div>
+            <h2>Job Listing Wireframes</h2>
+            <p>UI explorations for the job seeker experience</p>
+            <span class="count">4 mockups</span>
+        </a>
 
-        <div class="card">
-            <iframe class="card-preview" src="V2 _ Top chips _ card grid.html" loading="lazy"></iframe>
-            <div class="card-body">
-                <h2>V2: Top Chips + Card Grid</h2>
-                <p>Filter chips at the top with a responsive card grid layout.</p>
-                <a href="V2 _ Top chips _ card grid.html">View Full Mockup</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <iframe class="card-preview" src="V3 _ Split view _list _ preview_.html" loading="lazy"></iframe>
-            <div class="card-body">
-                <h2>V3: Split View (List + Preview)</h2>
-                <p>Split-pane layout with a list on one side and detail preview on the other.</p>
-                <a href="V3 _ Split view _list _ preview_.html">View Full Mockup</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <iframe class="card-preview" src="V4 _ The KOC Circle _employer-first_.html" loading="lazy"></iframe>
-            <div class="card-body">
-                <h2>V4: The KOC Circle (Employer-First)</h2>
-                <p>Employer-centric view focused on the KOC Circle experience.</p>
-                <a href="V4 _ The KOC Circle _employer-first_.html">View Full Mockup</a>
-            </div>
-        </div>
+        <a class="category-card" href="employer-dashboard/index.html">
+            <div class="icon">🏢</div>
+            <h2>Employer Dashboard Wireframes</h2>
+            <p>UI explorations for the employer management experience</p>
+            <span class="count">2 mockups</span>
+        </a>
     </main>
 </body>
 </html>
